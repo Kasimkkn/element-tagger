@@ -1,4 +1,4 @@
-mport { ElementTagger } from './core';
+import { ElementTagger } from './core';
 import { VitePlugin } from './plugins/vite-plugin';
 import { WebpackPlugin } from './plugins/webpack-plugin';
 import { NextPlugin } from './plugins/next-plugin';
@@ -32,8 +32,47 @@ export { CodeExporter };
 // Modes
 export { DevelopmentMode, ProductionMode, ExportMode } from './modes';
 
-// Types
+// Core exports
+export {
+    ASTParser,
+    ASTTraverser,
+    ElementDetector,
+    IDGenerator,
+    CodeInjector,
+    CodeStripper,
+    FileProcessor,
+    MappingManager
+} from './core';
+
+// Types - Export all types for external use
 export type * from './types';
+
+// Specific type exports for common use cases
+export type {
+    ElementTaggerOptions,
+    ProcessingMode,
+    TaggingOptions,
+    RuntimeOptions,
+    EditorOptions
+} from './types/config';
+
+export type {
+    ElementMapping,
+    MappingFile,
+    MappingStats,
+    MappingQuery
+} from './types/mapping';
+
+export type {
+    ASTNode,
+    JSXElement,
+    ParseResult,
+    DetectedElement,
+    ElementDetectionResult
+} from './types/ast';
+
+// Utility exports
+export { Logger, createLogger, configureLogging } from './utils/logger';
 
 // Default export for easy usage
 export default ElementTagger;

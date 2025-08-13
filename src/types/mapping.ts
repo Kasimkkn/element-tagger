@@ -1,6 +1,20 @@
 import type { ElementTaggerOptions } from './config';
 
 /**
+ * Processing result for file operations
+ */
+export interface ProcessingResult {
+    success: boolean;
+    filePath: string;
+    elementsProcessed: number;
+    processedCode?: string;
+    mappings?: ElementMapping[];
+    processingTime: number;
+    errors?: string[];
+    warnings?: string[];
+}
+
+/**
  * Element mapping entry stored in the mapping file
  */
 export interface ElementMapping {
