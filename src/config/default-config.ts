@@ -7,7 +7,7 @@ export const DEFAULT_CONFIG: Required<ElementTaggerOptions> = {
         '**/*.jsx',
         '**/*.tsx',
         '**/*.js', // If contains JSX
-        '**/*.ts'  // If contains JSX
+        '**/*.ts' // If contains JSX
     ],
     exclude: [
         'node_modules/**',
@@ -30,10 +30,10 @@ export const DEFAULT_CONFIG: Required<ElementTaggerOptions> = {
 
     // Element detection
     tagElements: {
-        domElements: true,      // div, span, h1, etc.
+        domElements: true, // div, span, h1, etc.
         customComponents: false, // Custom React components
-        fragments: false,       // React.Fragment
-        textNodes: false        // Text content
+        fragments: false, // React.Fragment
+        textNodes: false // Text content
     },
 
     // Runtime settings
@@ -51,5 +51,24 @@ export const DEFAULT_CONFIG: Required<ElementTaggerOptions> = {
         enableStyleEditor: true,
         autoSave: true,
         autoSaveDelay: 1000
+    },
+    mappingOptions: undefined,
+    idGeneration: undefined,
+    sync: undefined,
+    export: undefined,
+    fileProcessing: undefined,
+    performance: undefined,
+    logging: undefined,
+    plugins: [],
+    buildTools: {
+        vite: undefined,
+        webpack: undefined,
+        next: undefined,
+        rollup: undefined
+    },
+    environments: {
+        development: undefined,
+        production: undefined,
+        test: undefined
     }
 }

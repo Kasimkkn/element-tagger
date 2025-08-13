@@ -360,6 +360,9 @@ export interface ElementTaggerOptions {
     /** Element tagging options */
     tagElements?: TaggingOptions;
 
+    idPrefix?: string;
+    idFormat?: string;
+    hashLength?: number;
     /** ID generation options */
     idGeneration?: IDGenerationOptions;
 
