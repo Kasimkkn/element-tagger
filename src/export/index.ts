@@ -1,16 +1,30 @@
-/**
- * Code exporter for clean production code
- * TODO: Implement full export functionality
- */
-export class CodeExporter {
-    constructor() {
-        console.warn('CodeExporter not yet implemented');
-    }
+export { CodeExporter } from './code-exporter';
+export { AssetBundler } from './asset-bundler';
+export { ProjectGenerator } from './project-generator';
+export { ZipCreator } from './zip-creator';
 
-    export(): void {
-        // TODO: Implement code export
-    }
-}
+// Export types
+export type {
+    ExportConfig,
+    ExportResult,
+    ExportManifest
+} from './code-exporter';
 
-// Placeholder exports for future implementation
-export { CodeExporter as default };
+export type {
+    AssetBundlerConfig,
+    Asset,
+    AssetType,
+    BundlingResult
+} from './asset-bundler';
+
+export type {
+    ProjectGeneratorConfig,
+    GenerationResult,
+    ProjectTemplate
+} from './project-generator';
+
+export type {
+    ZipCreatorConfig,
+    ZipResult,
+    ZipEntry
+} from './zip-creator';

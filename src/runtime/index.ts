@@ -1,20 +1,23 @@
-/**
- * Runtime tracker for DOM element interaction
- * TODO: Implement full runtime functionality for browser environment
- */
-export class RuntimeTracker {
-    constructor() {
-        console.warn('RuntimeTracker not yet implemented');
-    }
+// Export all fully implemented runtime functionality
+export { ClickHandler } from './click-handler';
+export { DOMUtils } from './dom-utils';
+export { ElementHighlighter } from './element-highlighter';
+export { ElementTracker } from './element-tracker';
 
-    start(): void {
-        // TODO: Implement runtime tracking
-    }
+// Export types
+export type {
+    ClickEventData,
+    ClickHandlerConfig
+} from './click-handler';
 
-    stop(): void {
-        // TODO: Implement runtime stopping
-    }
-}
+export type {
+    HighlightStyle,
+    ElementHighlighterConfig
+} from './element-highlighter';
 
-// Placeholder exports for future implementation
-export { RuntimeTracker as default };
+export type {
+    TrackedElement,
+    ElementTrackerConfig,
+    ElementUpdateEvent
+} from './element-tracker';
+

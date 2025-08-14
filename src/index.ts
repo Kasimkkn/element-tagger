@@ -1,33 +1,32 @@
 import { ElementTagger } from './core';
-import { VitePlugin } from './plugins/vite-plugin';
-import { WebpackPlugin } from './plugins/webpack-plugin';
-import { NextPlugin } from './plugins/next-plugin';
-import { RuntimeTracker } from './runtime';
-import { VisualEditor } from './editor';
-import { CodeSynchronizer } from './sync';
-import { CodeExporter } from './export';
+import { VitePlugin, WebpackPlugin, NextPlugin, RollupPlugin } from './plugins';
+import { ClickHandler, ElementHighlighter, ElementTracker, DOMUtils } from './runtime';
+import { InlineEditor, VisualEditor } from './editor';
+import { CodeSynchronizer, ASTUpdater, ChangeTracker, FileWriter } from './sync';
+import { CodeExporter, AssetBundler, ProjectGenerator, ZipCreator } from './export';
 
 // Main class
 export { ElementTagger };
 
-// Plugin integrations
+// Plugin integrations - Now with complete implementations!
 export const plugins = {
     vite: VitePlugin,
     webpack: WebpackPlugin,
-    next: NextPlugin
+    next: NextPlugin,
+    rollup: RollupPlugin
 } as const;
 
-// Runtime functionality
-export { RuntimeTracker };
+// Runtime functionality - Now with complete implementations
+export { ClickHandler, ElementHighlighter, ElementTracker, DOMUtils };
 
-// Editor components
-export { VisualEditor };
+// Editor components - Now with InlineEditor implementation
+export { InlineEditor, VisualEditor };
 
-// Code synchronization
-export { CodeSynchronizer };
+// Code synchronization - Now with complete implementations
+export { CodeSynchronizer, ASTUpdater, ChangeTracker, FileWriter };
 
-// Export functionality
-export { CodeExporter };
+// Export functionality - Now with complete implementations
+export { CodeExporter, AssetBundler, ProjectGenerator, ZipCreator };
 
 // Modes
 export { DevelopmentMode, ProductionMode, ExportMode } from './modes';
@@ -43,6 +42,13 @@ export {
     FileProcessor,
     MappingManager
 } from './core';
+
+// Storage and persistence
+export {
+    CacheManager,
+    FileWatcher,
+    PersistenceManager
+} from './storage';
 
 // Types - Export all types for external use
 export type * from './types';
@@ -73,6 +79,11 @@ export type {
 
 // Utility exports
 export { Logger, createLogger, configureLogging } from './utils/logger';
+export { generateHash, generateStableHash } from './utils/hash-generator';
+export { normalizePath, getFileExtension } from './utils/path-utils';
+export { isJSXElement, getJSXElementName } from './utils/jsx-utils';
+export { toPascalCase, toCamelCase } from './utils/string-utils';
+export { validateElementId, validateFilePath } from './utils/validation';
 
 // Default export for easy usage
 export default ElementTagger;

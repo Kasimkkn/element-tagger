@@ -1,20 +1,27 @@
-/**
- * Code synchronization for live updates
- * TODO: Implement full synchronization functionality
- */
-export class CodeSynchronizer {
-    constructor() {
-        console.warn('CodeSynchronizer not yet implemented');
-    }
+export { CodeSynchronizer } from './code-synchronizer';
+export { ASTUpdater } from './ast-updater';
+export { ChangeTracker } from './change-tracker';
+export { FileWriter } from './file-writer';
 
-    sync(): void {
-        // TODO: Implement code synchronization
-    }
+// Export types
+export type {
+    SyncConfig,
+    SyncResult
+} from './code-synchronizer';
 
-    stop(): void {
-        // TODO: Implement sync stopping
-    }
-}
+export type {
+    ASTUpdateOperation,
+    ASTUpdaterConfig
+} from './ast-updater';
 
-// Placeholder exports for future implementation
-export { CodeSynchronizer as default };
+export type {
+    ChangeType,
+    ChangeRecord,
+    ChangeTrackerConfig
+} from './change-tracker';
+
+export type {
+    FileWriteConfig,
+    FileWriteResult,
+    BatchWriteResult
+} from './file-writer';

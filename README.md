@@ -148,3 +148,55 @@ Your core is complete! You can now:
 ✅ Complete TypeScript support  
 
 Your Element Tagger is now a **fully functional, production-ready core system** for automatic JSX element tagging! 🎉
+
+
+Create a modern, real-time step tracking application using React Native with automatic start/stop functionality, accurate step counting, and a sleek dark mode UI that works seamlessly on both iOS and Android.
+
+Core Features & Requirements
+
+ 1.📱 Step Tracking Functionality
+ - Real-time step counting using device accelerometer/gyroscope
+ - Automatic activity detection (walking/running vs stationary)
+ - Auto-start when movement detected
+ - Auto-pause when user stops moving for 2+ minutes
+ - Manual start/stop/pause controls
+ - Step goal setting and progress tracking
+ - Daily, weekly, monthly statistics
+ - Data persistence using AsyncStorage
+
+2. 🎨 Modern UI/UX Design
+ - Dark theme as primary with optional light mode toggle
+ - Glassmorphism and neumorphism design elements
+ - Smooth micro-animations and transitions
+ - Circular progress indicators for goals
+ - Card-based layout with subtle shadows
+ - iOS and Android native design patterns
+ - Haptic feedback for interactions
+ - Pull-to-refresh functionality
+
+3. 📊 Dashboard Components
+ - Large, prominent step counter with animated numbers
+ - Circular progress ring showing daily goal completion
+ - Distance traveled and calories burned estimates
+ - Active time vs rest time breakdown
+ - Weekly step trend chart/graph
+ - Achievement badges and milestones
+ - Current pace/speed indicator
+
+4. 🎯 Advanced Features
+- Customizable widgets for home screen
+- Local data storage by default
+- Request only necessary permissions
+- Background processing for continuous step counting
+- Battery optimization strategies
+- Sensor data filtering and noise reduction
+- Calibration system for improved accuracy
+
+
+
+5.📱 Screen Structure
+- Home/Dashboard - Main step counter and daily overview
+- Statistics - Detailed analytics and historical data
+- Goals - Goal setting and achievement tracking
+- Profile - User settings, calibration, preferences
+- History - Detailed activity log and trends
